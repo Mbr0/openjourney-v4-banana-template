@@ -12,7 +12,7 @@ def init():
     global model
 
     t1 = time.time()
-    model_id = "prompthero/openjourney"
+    model_id = "prompthero/openjourney-v4"
     model = StableDiffusionPipeline.from_pretrained(
         model_id
     ).to("cuda")
