@@ -2,9 +2,9 @@
     "name": "Openjourney-v4",
     "category": "Computer Vision",
     "example_input": {
-      "prompt": "retro serie of different cars with different colors and shapes, mdjrny-v4 style",
-      "negative": "",
-      "num_inference_steps": 50,
+      "prompt": "kneeling cat knight, portrait, finely detailed armor, intricate design, silver, silk, cinematic lighting, 4k",
+      "negative": "easynegative",
+      "num_inference_steps": 25,
       "guidance_scale": 7.5
     },
     "example_output": {

@@ -7,9 +7,9 @@ from io import BytesIO
 from PIL import Image
 
 model_inputs = {
-    'prompt': 'retro serie of different cars with different colors and shapes, mdjrny-v4 style',
-    'negative': '',
-    'num_inference_steps': 50,
+    'prompt': 'kneeling cat knight, portrait, finely detailed armor, intricate design, silver, silk, cinematic lighting, 4k',
+    'negative': 'easynegative',
+    'num_inference_steps': 25,
     'guidance_scale': 7.5
 }
 

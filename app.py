@@ -27,8 +27,8 @@ def inference(model_inputs:dict) -> dict:
     # Parse out your arguments
     prompt = model_inputs.get('prompt', None)
     negative = model_inputs.get('negative', None)
-    num_inference_steps = model_inputs.get('num_inference_steps', 50)
-    guidance_scale = model_inputs.get('guidance_scale', 7)
+    num_inference_steps = model_inputs.get('num_inference_steps', 25)
+    guidance_scale = model_inputs.get('guidance_scale', 7.5)
     
     if prompt == None:
         return {'message': "No prompt provided"}
@@ -36,7 +36,7 @@ def inference(model_inputs:dict) -> dict:
     # Run the model
     t1 = time.time()
     with autocast("cuda"):
-        image = model(prompt, negative_prompt=negative, num_images_per_prompt=1, num_inference_steps=50, guidance_scale=7.5).images[0]
+        image = model(prompt, negative_prompt=negative, num_images_per_prompt=1, num_inference_steps=25, guidance_scale=7.5).images[0]
     t2 = time.time()
     print("Inference took - ",t2-t1,"seconds")
     buffered = BytesIO()
